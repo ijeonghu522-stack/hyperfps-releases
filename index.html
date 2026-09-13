@@ -478,6 +478,12 @@ body::after {
   font-size: 12px;
   letter-spacing: 1.5px;
 }
+.strip-actions .meta.verify {
+  word-break: break-all;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  max-width: 460px;
+}
 
 /* ---------------- SECTIONS ---------------- */
 .features, .how, .pricing, .faq { max-width: var(--wrap); margin: 0 auto; padding: 96px 24px 0; }
@@ -851,6 +857,8 @@ body::after {
       <div class="strip-actions">
         <a href="https://github.com/ijeonghu522-stack/hyperfps-releases/releases/latest/download/HYPERFPS-Setup.exe" class="btn btn-primary btn-lg" download>Windows 다운로드</a>
         <span class="meta">v1.0 · 36 MB · HYPERFPS-Setup.exe</span>
+        <span class="meta verify">SHA-256: 23DCC509D35249A035333F3730E3B8669094722C4DFF518A6BEFCFBEE74FF824</span>
+        <span class="meta">Windows 경고가 뜨면 "추가 정보 → 실행" 을 누르세요 (자체 서명 인증서 · 아래 FAQ 참고)</span>
       </div>
     </div>
   </section>
@@ -987,6 +995,10 @@ body::after {
       <details>
         <summary>HYPERFPS는 진짜 프레임을 올려주나요?</summary>
         <p>백그라운드 리소스 확보, 프로세스 우선순위 상향, 메모리 정리를 통해 프레임 드랍을 줄이고 평균 FPS를 높입니다. 하드웨어를 바꾸는 것은 아니며, 시스템 상태에 따라 체감이 다를 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>바이러스/Windows 경고가 떠요. 안전한가요?</summary>
+        <p>백신이 "오탐(false positive)"으로 이 프로그램을 경고하는 경우가 흔합니다. 이유는 PyInstaller 패키징 방식과 자체 서명(공인 인증서 미보유) 때문입니다. 실제 파일이 맞는지 확인하려면 사이트의 SHA-256 값과 위 파일이 일치하는지 대조해 주세요. Windows SmartScreen 경고는 "추가 정보 → 그래도 실행" 을 선택하면 진행됩니다.</p>
       </details>
       <details>
         <summary>PRO를 구매하면 어떻게 받나요?</summary>
